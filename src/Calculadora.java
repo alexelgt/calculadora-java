@@ -1,7 +1,7 @@
 /**
  * 
  * @author Alexelgt
- * @version 0.2
+ * @version 0.3
  * @since 0.1
  */
 public class Calculadora {
@@ -44,6 +44,18 @@ public class Calculadora {
 			throw new ArithmeticException("división entre 0");
 		}
 		return a / b;
+	}
+	
+	/**
+	 * @param a Valor que representa el primer operando
+	 * @throws ArithmeticException El primer operando no puede ser menor de 0
+	 * @return Resultado de la operación
+	 */
+	public float raizCuadrada(float a) throws ArithmeticException {
+		if (a < 0) {
+			throw new ArithmeticException("raíz cuadrada de un número negativo");
+		}
+		return (float) Math.sqrt(a);
 	}
 
 	public static void main(String[] args) {
